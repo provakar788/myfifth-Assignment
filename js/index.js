@@ -34,8 +34,8 @@ document.getElementById('first-btn')
         historyItem.classList.add('lg:w-7/12','w-full','border','rounded-xl','p-4','bg-white','text-center','space-y-4','mx-auto') ;
         historyItem.innerHTML = `
                             <div class="flex gap-5 justify-center">
-                                <p class="text-sm opacity-75">Date : ${new Date().toLocaleDateString()}</p>
-                                <p class="text-sm opacity-75">Time : ${new Date().toLocaleTimeString()}</p>
+                                <p class="text-sm opacity-96">Date : ${new Date().toLocaleDateString()}</p>
+                                <p class="text-sm opacity-96">Time : ${new Date().toLocaleTimeString()}</p>
                             </div>
                             <p class="font-bold">${noakhaliDonateInput} Taka is Donated for Flood at Noakhali, Bangladesh.</p>`;
 
@@ -78,8 +78,8 @@ document.getElementById('second-btn')
         historyItem.classList.add('lg:w-7/12','w-full','border','rounded-xl','p-4','bg-white','text-center','space-y-4','mx-auto') ;
         historyItem.innerHTML = `
                             <div class="flex gap-5 justify-center">
-                                <p class="text-sm opacity-75">Date : ${new Date().toLocaleDateString()}</p>
-                                <p class="text-sm opacity-75">Time : ${new Date().toLocaleTimeString()}</p>
+                                <p class="text-sm opacity-96">Date : ${new Date().toLocaleDateString()}</p>
+                                <p class="text-sm opacity-96">Time : ${new Date().toLocaleTimeString()}</p>
                             </div>
                             <p class="font-bold">${feniDonateInput} Taka is Donated for Flood Relief in Feni, Bangladesh.</p>`;
 
@@ -123,8 +123,8 @@ document.getElementById('third-btn')
         historyItem.classList.add('lg:w-7/12','w-full','border','rounded-xl','p-4','bg-white','text-center','space-y-4','mx-auto') ;                            
         historyItem.innerHTML = `
                             <div class="flex gap-5 justify-center">
-                                <p class="text-sm opacity-75">Date : ${new Date().toLocaleDateString()}</p>
-                                <p class="text-sm opacity-75">Time : ${new Date().toLocaleTimeString()}</p>
+                                <p class="text-sm opacity-96">Date : ${new Date().toLocaleDateString()}</p>
+                                <p class="text-sm opacity-96">Time : ${new Date().toLocaleTimeString()}</p>
                             </div>
                             <p class="font-bold">${injuredDonateInput} Taka is Donated for Aid for injured in the Quota Movement, Bangladesh.</p>`;
 
