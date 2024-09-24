@@ -31,7 +31,7 @@
 </head>
 <body class="font-lexend">
     <!-- navbar section -->
-    <nav class="navbar bg-lightPink lg:pb-8 pb-6 pt-4 flex lg:justify-around justify-between items-center mx-auto sticky top-0">
+    <nav class="navbar bg-lightPink lg:pb-8 pb-6 pt-4 flex lg:justify-around justify-between items-center mx-auto sticky top-0 bg-opacity-100">
         <div class="lg:block hidden">
             <a id="home-btn" onclick="history.back()" class="btn bg-lightGreen px-8 border-none">Home</a>
         </div>
@@ -44,8 +44,9 @@
             <p class="flex gap-1 lg:text-lg sm:text-base"><span id="donation-minus">36550</span> BDT</p>
         </div>
         <div class="dropdown dropdown-end lg:hidden">
-            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <button id="blog-hamburger" tabindex="0" role="button" class="btn btn-ghost btn-square">
               <svg
+                id="hamburger-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -56,17 +57,31 @@
                   stroke-width="2"
                   d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
-            </div>
+              <!-- close button -->
+              <svg 
+                  id="close-icon"
+                  xmlns="http://www.w3.org/2000/svg" 
+                  class="h-5 w-5 hidden" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor">
+                  <path stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
             <ul
+                id="blog-hamburger-menu"
                 tabindex="0"
-                class="menu menu-xs dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-0 shadow">
+                class="menu menu-xs dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-0 shadow hidden">
                 <a id="blog-btn" onclick="history.back()" class="btn bg-lightGreen px-6 border-none">Home</a>
             </ul>
         </div>
     </nav>
     <main>
         <!-- FAQ question section -->
-        <div class="lg:w-4/5 w-11/12 mx-auto mt-20">
+        <div class="lg:w-4/6 w-11/12 mx-auto mt-20">
             <div class="flex relative">
               <h1 class="lg:text-4xl text-3xl font-bold lg:mb-8 mb-4">Important FAQ</h1>
               <img class="lg:w-1/12 w-1/5 absolute lg:left-[17rem] left-56 lg:-top-14 -top-11 animate-pulse" src="./assets/faq.png" alt="">
@@ -75,7 +90,7 @@
               <input type="radio" name="my-accordion-2"  />
               <div class="collapse-title lg:text-lg text-base font-medium">What is the Document Object Model (DOM)?</div>
               <div class="collapse-content">
-                <p class="lg:text-base text-sm opacity-85">Document Object Model is a structured representation of a web page. It allows programming language, 
+                <p class="lg:text-base text-sm text-opacity-85">Document Object Model is a structured representation of a web page. It allows programming language, 
                   like JavaScript, to access, manipulate, and update the content, sturcture, and style of a document.
                 </p>
               </div>
@@ -84,7 +99,7 @@
               <input type="radio" name="my-accordion-2" />
               <div class="collapse-title lg:text-lg text-base font-medium">How do you select an element from the DOM?</div>
               <div class="collapse-content">
-                <p class="lg:text-base text-sm opacity-85">Selecting an element from the DOM in JavaScript is fundamental for interacting with and
+                <p class="lg:text-base text-sm text-opacity-85">Selecting an element from the DOM in JavaScript is fundamental for interacting with and
                    manipulating web pages. The DOM represents the structure of an HTML document as a tree of objects, where each element is a node 
                    in that tree. To modify or extrat information from these elements, you need to access them using JavaScript. JavaScript provides several 
                    methods that allow you to target and interact with specific HTML elements.
@@ -96,7 +111,7 @@
               <div class="collapse-title lg:text-lg text-base font-medium">
                   What is event delegation in the context of the DOM, and why is it useful?</div>
               <div class="collapse-content">
-                <p class="lg:text-base text-sm opacity-85">
+                <p class="lg:text-base text-sm text-opacity-85">
                   Event delegation is a technique in JavaScript that leverages event bubbling (or propagation) to handle events more efficiently. 
                   Instead of attaching individual event listeners to multiple child elements, you attach a single event listener to a parent element. 
                   when an event occurs on any of the child elements, it bubbles up to the parent, where the listener can handle it. This allows you to 
@@ -108,7 +123,7 @@
               <input type="radio" name="my-accordion-2" />
               <div class="collapse-title lg:text-lg text-base font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
               <div class="collapse-content">
-                <p class="lg:text-base text-sm opacity-85">
+                <p class="lg:text-base text-sm text-opacity-85">
                   <b>Manipulating Attributes :</b> Attributes are properties that you can set directly on HTML elements, such as id, src, href, class etc. JavaScript
                    provides various methods to get, set or remove these attributes. <br>
                   <b>Manipulating Styles :</b> CSS styles can be modified directly using JavaScript through the style proper or by manipulating CSS class names. 
@@ -120,6 +135,15 @@
     </main>
     <footer class="py-12 bg-lightPink mt-16"></footer>
 
+    <script>
+        // home hambuger toggle
+        document.getElementById('blog-hamburger')
+            .addEventListener('click', function(){
+                document.getElementById('blog-hamburger-menu').classList.toggle('hidden');
+                document.getElementById('hamburger-icon').classList.toggle('hidden');
+                document.getElementById('close-icon').classList.toggle('hidden');
+        });
+    </script>
     <script src="./js/index.js"></script>
 </body>
 </html>

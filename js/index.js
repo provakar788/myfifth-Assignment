@@ -37,7 +37,7 @@ document.getElementById('first-btn')
                                 <p class="text-sm opacity-96">Date : ${new Date().toLocaleDateString()}</p>
                                 <p class="text-sm opacity-96">Time : ${new Date().toLocaleTimeString()}</p>
                             </div>
-                            <p class="font-bold">${noakhaliDonateInput} Taka is Donated for Flood at Noakhali, Bangladesh.</p>`;
+                            <p class="font-bold"><span class="text-red-600">${noakhaliDonateInput}</span> Taka is Donated for Flood at Noakhali, Bangladesh.</p>`;
 
         donationHistoryItem.insertBefore(historyItem, donationHistoryItem.firstChild);
 });
@@ -81,7 +81,7 @@ document.getElementById('second-btn')
                                 <p class="text-sm opacity-96">Date : ${new Date().toLocaleDateString()}</p>
                                 <p class="text-sm opacity-96">Time : ${new Date().toLocaleTimeString()}</p>
                             </div>
-                            <p class="font-bold">${feniDonateInput} Taka is Donated for Flood Relief in Feni, Bangladesh.</p>`;
+                            <p class="font-bold"><span class="text-red-600">${feniDonateInput}</span> Taka is Donated for Flood Relief in Feni, Bangladesh.</p>`;
 
 
         donationHistoryItem.insertBefore(historyItem, donationHistoryItem.firstChild);
@@ -126,7 +126,7 @@ document.getElementById('third-btn')
                                 <p class="text-sm opacity-96">Date : ${new Date().toLocaleDateString()}</p>
                                 <p class="text-sm opacity-96">Time : ${new Date().toLocaleTimeString()}</p>
                             </div>
-                            <p class="font-bold">${injuredDonateInput} Taka is Donated for Aid for injured in the Quota Movement, Bangladesh.</p>`;
+                            <p class="font-bold"><span class="text-red-600">${injuredDonateInput}</span> Taka is Donated for Aid for injured in the Quota Movement, Bangladesh.</p>`;
 
         donationHistoryItem.insertBefore(historyItem, donationHistoryItem.firstChild);
 });
@@ -159,4 +159,12 @@ document.getElementById('donation-btn')
 const blogBtn = document.getElementById('blog-btn')
     .addEventListener('click', function(){
         window.location.href = './blog.html';
+});
+
+// home hambuger toggle
+document.getElementById('home-hamburger')
+    .addEventListener('click', function(){
+        document.getElementById('home-hamburger-menu').classList.toggle('hidden');
+        document.getElementById('hamburger-icon').classList.toggle('hidden');
+        document.getElementById('close-icon').classList.toggle('hidden');
 });

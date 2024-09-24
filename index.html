@@ -32,7 +32,7 @@
 <body class="font-lexend">
     <!-- navbar and button section -->
     <nav class="sticky top-0 pb-2 backdrop-blur-sm">
-        <div class="navbar bg-lightPink lg:pb-8 pb-6 pt-4 flex lg:justify-around justify-between items-center mx-auto">
+        <div class="navbar bg-lightPink lg:pb-8 pb-6 pt-4 flex lg:justify-around justify-between items-center mx-auto bg-opacity-90">
             <div class="lg:block hidden">
                 <a id="blog-btn" class="btn bg-lightGreen px-8 border-none">Blog</a>
             </div>
@@ -45,8 +45,9 @@
                 <p class="flex gap-1 lg:text-lg sm:text-base"><span id="donation-minus">36550</span> BDT</p>
             </div>
             <div class="dropdown dropdown-end lg:hidden">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <button id="home-hamburger" tabindex="0" role="button" class="btn btn-ghost btn-square">
                   <svg
+                    id="hamburger-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -57,22 +58,36 @@
                       stroke-width="2"
                       d="M4 6h16M4 12h16M4 18h16"></path>
                   </svg>
-                </div>
+                  <!-- close button -->
+                  <svg 
+                      id="close-icon"
+                      xmlns="http://www.w3.org/2000/svg" 
+                      class="h-5 w-5 hidden" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor">
+                      <path stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
                 <ul
+                    id="home-hamburger-menu"
                     tabindex="0"
-                    class="menu menu-xs dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-0 shadow">
+                    class="menu menu-xs dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-0 shadow hidden">
                     <a id="blog-btn" class="btn bg-lightGreen px-8 border-none" onclick="blogBtn(window.location.href = './blog.html')">Blog</a>
                 </ul>
             </div>
         </div>
-        <div class="flex justify-center gap-3 lg:mt-10 mt-10 mb-4">
+        <div class="flex justify-center gap-3 mt-10 mb-4">
             <button id="donation-btn" class="btn bg-lightGreen px-8">Donation</button>
             <button id="history-btn" class="bg-base-200 border shadow-none px-8 rounded-lg">History</button>
         </div>
     </nav>
     <main>
         <!-- donation content section -->
-        <div id="content-div" class="lg:w-3/4 w-full mx-auto mt-6 space-y-6">
+        <div id="content-div" class="lg:w-3/4 w-full mx-auto mt-3 space-y-6">
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 border p-4 rounded-xl">
                 <img class="w-full" src="./assets/noakhali.png" alt="">
                 <div>
