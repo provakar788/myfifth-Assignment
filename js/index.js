@@ -154,3 +154,9 @@ document.getElementById('donation-btn')
         document.getElementById('donation-btn').classList.add('bg-lightGreen','rounded-lg');
         document.getElementById('donation-btn').classList.remove('border');
 });
+
+// enter blog page
+const blogBtn = document.getElementById('blog-btn')
+    .addEventListener('click', function(){
+        window.location.href = './blog.html';
+});
