@@ -31,7 +31,46 @@
 </head>
 <body class="font-lexend">
     <main>
-        
+        <!-- navbar and button section -->
+        <div class="sticky top-0 pb-2 backdrop-blur-sm">
+            <div class="navbar bg-lightPink lg:pb-8 pb-6 pt-4 flex lg:justify-around justify-between items-center mx-auto">
+                <div class="lg:block hidden">
+                    <a id="blog-btn" class="btn bg-lightGreen px-8 border-none">Blog</a>
+                </div>
+                <div class="flex items-center gap-2">
+                    <img class="lg:w-1/6 w-1/6" src="./assets/logo.png" alt="">
+                    <h1 class="lg:w-11/12 lg:text-xl text-base font-bold">Donate Bangladesh</h1>
+                </div>
+                <div class=" flex items-center gap-1">
+                    <img class="w-1/5" src="./assets/coin.png" alt="">
+                    <p class="flex gap-1 lg:text-lg sm:text-base"><span id="donation-minus">36550</span> BDT</p>
+                </div>
+                <div class="dropdown dropdown-end lg:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="inline-block h-5 w-5 stroke-current">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                      </svg>
+                    </div>
+                    <ul
+                        tabindex="0"
+                        class="menu menu-xs dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-0 shadow">
+                        <a id="blog-btn" class="btn bg-lightGreen px-8 border-none" onclick="blogBtn(window.location.href = './blog.html')">Blog</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-center gap-3 lg:mt-14 mt-10 mb-6">
+                <button id="donation-btn" class="btn bg-lightGreen px-8">Donation</button>
+                <button id="history-btn" class="bg-base-200 border shadow-none px-8 rounded-lg">History</button>
+            </div>
+        </div>
     </main>    
 </body>
 </html>
