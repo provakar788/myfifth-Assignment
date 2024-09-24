@@ -130,3 +130,27 @@ document.getElementById('third-btn')
 
         donationHistoryItem.insertBefore(historyItem, donationHistoryItem.firstChild);
 });
+
+// history button transparent
+document.getElementById('history-btn')
+    .addEventListener('click', function(){
+        
+        document.getElementById('history-container').classList.remove('hidden');
+        document.getElementById('content-div').classList.add('hidden');
+        document.getElementById('history-btn').classList.remove('bg-base-200');
+        document.getElementById('history-btn').classList.add('bg-lightGreen');
+        document.getElementById('donation-btn').classList.remove('bg-lightGreen','btn');
+        document.getElementById('donation-btn').classList.add('border','rounded-lg','py-3','bg-base-200');
+});
+
+// donation button transparent
+document.getElementById('donation-btn')
+    .addEventListener('click', function(){
+        
+        document.getElementById('history-container').classList.add('hidden');
+        document.getElementById('content-div').classList.remove('hidden');
+        document.getElementById('history-btn').classList.add('bg-base-200');
+        document.getElementById('history-btn').classList.remove('bg-lightGreen');
+        document.getElementById('donation-btn').classList.add('bg-lightGreen','rounded-lg');
+        document.getElementById('donation-btn').classList.remove('border');
+});
