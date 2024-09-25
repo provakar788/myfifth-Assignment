@@ -33,7 +33,7 @@
     <!-- navbar section -->
     <nav class="navbar bg-lightPink lg:pb-8 pb-6 pt-4 flex lg:justify-around justify-between items-center mx-auto sticky top-0 bg-opacity-100">
         <div class="lg:block hidden">
-            <a id="home-btn" onclick="history.back()" class="btn bg-lightGreen px-8 border-none">Home</a>
+            <a id="home-btn" class="btn bg-lightGreen px-8 border-none">Home</a>
         </div>
         <div class="flex items-center gap-2">
             <img class="lg:w-1/6 w-1/6" src="./assets/logo.png" alt="">
@@ -75,7 +75,7 @@
                 id="blog-hamburger-menu"
                 tabindex="0"
                 class="menu menu-xs dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-24 p-0 shadow hidden">
-                <a id="blog-btn" onclick="history.back()" class="btn bg-lightGreen px-6 border-none">Home</a>
+                <a id="responsive-home-btn" class="btn bg-lightGreen px-6 border-none">Home</a>
             </ul>
         </div>
     </nav>
@@ -136,13 +136,23 @@
     <footer class="py-12 bg-lightPink mt-16"></footer>
 
     <script>
-        // home hambuger toggle
+        // blog hambuger toggle
         document.getElementById('blog-hamburger')
             .addEventListener('click', function(){
                 document.getElementById('blog-hamburger-menu').classList.toggle('hidden');
                 document.getElementById('hamburger-icon').classList.toggle('hidden');
                 document.getElementById('close-icon').classList.toggle('hidden');
         });
+
+        // home back button 
+        function backHomePage(id){
+          document.getElementById(id)
+            .addEventListener('click', function(){
+              window.location.href = './index.html';
+            })
+        };
+        backHomePage('home-btn')
+        backHomePage('responsive-home-btn')
     </script>
     <script src="./js/index.js"></script>
 </body>

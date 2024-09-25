@@ -156,10 +156,8 @@ document.getElementById('donation-btn')
 });
 
 // enter blog page
-const blogBtn = document.getElementById('blog-btn')
-    .addEventListener('click', function(){
-        window.location.href = './blog.html';
-});
+enterBlogPage('blog-btn')
+enterBlogPage('responsive-blog-btn')
 
 // home hambuger toggle
 document.getElementById('home-hamburger')

@@ -10,3 +10,10 @@ function setTextValueById(id){
 function donationValueMinus(id){
     return document.getElementById(id).innerText;
 }
+
+function enterBlogPage(id){
+    const blogBtn = document.getElementById(id)
+        .addEventListener('click', function(){
+            window.location.href = './blog.html';
+    })
+}
